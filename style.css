@@ -2,42 +2,133 @@
     width: 100px;
     height: 100px;
     border: 1px solid red;
+    transition: background-color 2s;
 }
+
+.ex-1-square:hover {
+    background-color: red;
+}
+
 .ex-2-square {
     width: 100px;
     height: 100px;
     background: red;
+    transition: height 2s;
 }
+
+.ex-2-square:hover {
+    height: 200px;
+}
+
 .ex-3-square {
     width: 100px;
     height: 100px;
     background: red;
+    transition: border-radius 2s;
 }
+
+.ex-3-square:hover {
+    border-radius: 50%;
+}
+
 .ex-4-square {
     width: 100px;
     height: 100px;
     background: red;
+    transition: opacity 2s;
 }
+
+.ex-4-square:hover {
+    opacity: 0;
+}
+
 .ex-5-square {
     margin: 20px;
     width: 60px;
     height: 60px;
     background: red;
+    transition: height 2s, width 2s;
 }
+
+.ex-5-square:hover {
+    width: 100px;
+    height: 100px;
+}
+
+.ex-5-square:active {
+    width: 20px;
+    height: 20px;
+}
+
 .ex-6-img, .ex-7-img, .ex-8-img {
     width: 500px;
+}
+
+.ex-6-img:hover {
+    filter: grayscale(100%);
+}
+
+.ex-7-img:hover {
+    filter: brightness(0.2);
+    transition: filter 2s;
+}
+
+.ex-8-img:hover {
+    border-radius: 25px;
+    filter: sepia(0.8) brightness(0.5);
 }
 
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
 }
+
+.ex-9-img:hover {
+    border-radius: 25px;
+    filter: sepia(0.8) brightness(0.5);
+    width: 500px;
+}
+
 .ex-10-icon {
     font-size: 60px;
+    animation: ex-10-icon 1s linear infinite;
 }
+
+@keyframes ex-10-icon {
+    0% {
+        transform: rotate(360deg);
+    }
+    /* 25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    } */
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 .ex-11-icon {
     font-size: 60px;
 }
+
+.ex-11-icon:hover {
+    animation: ex-11-icon 1s linear;
+}
+
+@keyframes ex-11-icon {
+    0% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-270deg);
+    }
+}
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -51,6 +142,10 @@
     text-align: center;
     text-decoration: none;
 }
+
+
+
+
 .ex-12-top-white, .ex-13-top-white {
     position: absolute;
     top: -10px;
